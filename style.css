@@ -151,8 +151,28 @@ background:#4facfe;
 color:white;
 }
 
+/* СПИСОК ЗАДАЧ З ПРОКРУТКОЮ */
+
 ul{
 list-style:none;
+max-height:400px;
+overflow-y:auto;
+padding-right:5px;
+}
+
+/* Красивий scrollbar */
+
+ul::-webkit-scrollbar{
+width:6px;
+}
+
+ul::-webkit-scrollbar-thumb{
+background:#4facfe;
+border-radius:10px;
+}
+
+ul::-webkit-scrollbar-track{
+background:transparent;
 }
 
 li{
@@ -236,7 +256,6 @@ border-radius:8px;
 border:none;
 box-shadow:0 2px 6px rgba(0,0,0,0.1);
 }
-
 
 @media (max-width:600px){
 .input-area{
