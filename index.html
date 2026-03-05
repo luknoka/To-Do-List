@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task Manager Pro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="top-bar">
+<h1>📋 Task Manager</h1>
+<button onclick="toggleTheme()" class="theme-btn">🌙</button>
+</div>
+
+<div class="progress-box">
+<div id="progressBar"></div>
+</div>
+
+<div class="input-area">
+
+<input type="text" id="taskInput" placeholder="Нове завдання">
+<input type="date" id="taskDate">
+
+<select id="taskPriority">
+<option value="normal">Звичайне</option>
+<option value="important">Важливе ⭐</option>
+</select>
+
+<select id="taskCategory">
+<option value="study">Навчання</option>
+<option value="work">Робота</option>
+<option value="life">Особисте</option>
+</select>
+
+<button onclick="addTask()">Додати</button>
+<button onclick="exportTasks()">📦 Експорт</button>
+
+</div>
+
+<div class="filters">
+<button onclick="setFilter('all',this)" class="filter-btn active">Усі</button>
+<button onclick="setFilter('active',this)" class="filter-btn">Активні</button>
+<button onclick="setFilter('completed',this)" class="filter-btn">Виконані</button>
+</div>
+
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="🔎 Пошук задач..." onkeyup="renderTasks()">
+</div>
+
+<ul id="taskList"></ul>
+
+<div class="footer">
+<span id="taskCount"></span>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
